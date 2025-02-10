@@ -43,6 +43,15 @@ def main():
             logger.info("The Mobile Number is not valid")
             print("The Mobile Number is not valid")
 
+    def password_rule(password):
+        pattern=r'[a-zA-Z0-9]{8,}'
+        if re.match(pattern,password):
+            logger.info("The password is valid.")
+            print("The Password is valid")
+        else:
+            logger.info("The password is not valid")
+            print("The password is not valid")
+    
     first_name=input("Enter the First Name: ")
     last_name=input("Enter the Last Name: ")
     email=input("Enter the email: ")       
@@ -51,6 +60,8 @@ def main():
     last_name_validation(last_name)
     email_validation(email)
     mobile_num_validation(mobile_num)
+    password=input("Enter the password: ")
+    password_rule(password)
 
 if __name__=="__main__":
     main()
