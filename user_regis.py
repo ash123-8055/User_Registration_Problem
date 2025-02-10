@@ -44,23 +44,26 @@ def main():
             print("The Mobile Number is not valid")
 
     def password_rule(password):
-        pattern=r'(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*])[a-zA-Z0-9]{8,}'
-        if re.match(pattern,password):
+        pattern=r'(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*])[a-zA-Z0-9@#$%^&*]{8,}'
+        counter=0
+        special_char=["@","#","$","%","^","&"]
+        counter=sum((1 for i in password if str(i) in special_char))
+        if counter==1 and re.match(pattern,password):
             logger.info("The password is valid.")
             print("The Password is valid")
         else:
             logger.error("The password is not valid")
             print("The password is not valid")
     
-    # first_name=input("Enter the First Name: ")
-    # last_name=input("Enter the Last Name: ")
-    # email=input("Enter the email: ")       
-    # mobile_num=input("Enter the mobile number: ")
+    first_name=input("Enter the First Name: ")
+    last_name=input("Enter the Last Name: ")
+    email=input("Enter the email: ")       
+    mobile_num=input("Enter the mobile number: ")
     password=input("Enter the password: ")
-    # first_name_validation(first_name)
-    # last_name_validation(last_name)
-    # email_validation(email)
-    # mobile_num_validation(mobile_num)
+    first_name_validation(first_name)
+    last_name_validation(last_name)
+    email_validation(email)
+    mobile_num_validation(mobile_num)
     password_rule(password)
 
 if __name__=="__main__":
