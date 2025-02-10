@@ -26,7 +26,6 @@ def main():
             print("The Last Name is not valid.")
 
     def email_validation(email):
-        # pattern=r'^[A-Za-z].*[a-zA-Z0-9].*@[a-zA-Z].*\.[a-zA-Z].*[a-zA-Z]$'
         pattern=r'^[A-Za-z0-9_]+[\.]+[A-Za-z0-9]+@[A-Za-z\.]+[A-Za-z]$'
         if re.findall(pattern,email):
             logger.info("The email is valid.")
@@ -56,16 +55,16 @@ def main():
             logger.error("The password is not valid")
             print("The password is not valid")
     
-    # first_name=input("Enter the First Name: ")
-    # last_name=input("Enter the Last Name: ")
+    first_name=input("Enter the First Name: ")
+    last_name=input("Enter the Last Name: ")
     email=input("Enter the email: ")       
-    # mobile_num=input("Enter the mobile number: ")
-    # password=input("Enter the password: ")
-    # first_name_validation(first_name)
-    # last_name_validation(last_name)
+    mobile_num=input("Enter the mobile number: ")
+    password=input("Enter the password: ")
+    first_name_validation(first_name)
+    last_name_validation(last_name)
     email_validation(email)
-    # mobile_num_validation(mobile_num)
-    # password_rule(password)
+    mobile_num_validation(mobile_num)
+    password_rule(password)
 
 if __name__=="__main__":
     main()
