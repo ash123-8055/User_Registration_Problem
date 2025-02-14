@@ -26,7 +26,12 @@ def main():
             print("The Last Name is not valid.")
 
     def email_validation(email):
-        pattern=r'^[A-Za-z0-9_]+[\.]+[A-Za-z0-9]+@[A-Za-z\.]+[A-Za-z]$'
+        #version 1
+        # pattern=r'^[A-Za-z0-9_]+[\.]+[A-Za-z0-9]+@[A-Za-z\.]+[A-Za-z]$'
+        #version2
+        # pattern=r'^[A-Za-z]*[\+\-\.]*[A-Za-z0-9]+@[A-Za-z0-9]*[a-zA-Z\.]$'
+        #version3
+        pattern=r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$'
         if re.findall(pattern,email):
             logger.info("The email is valid.")
             print("The email is valid.")
