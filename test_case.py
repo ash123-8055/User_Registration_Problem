@@ -94,7 +94,7 @@ def test_true_mobile_num_validation():
     """Description: 
         This function validates the mobile number using regex
        Parameter:
-        mobile_num: first name is user-inputted
+        mobile_num: mobile number is user-inputted
        Return:
         Prints the mobile number is valid if true else prints not valid"""
 
@@ -107,7 +107,7 @@ def test_false_mobile_num_validation():
     """Description: 
         This function validates the mobile number using regex
        Parameter:
-        mobile_num: first name is user-inputted
+        mobile_num: mobile number is user-inputted
        Return:
         Prints the mobile number is valid if true else prints not valid"""
 
