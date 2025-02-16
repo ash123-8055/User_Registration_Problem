@@ -174,3 +174,4 @@ cython_debug/
 
 #logFile
 newfile.log
+user_registration.log
