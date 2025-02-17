@@ -3,6 +3,14 @@ import logging
 
 
 def main():
+    """
+    Description: Driver Code
+    
+    Parameter: None
+        
+    Return: Calls the other Functions
+    """
+
     first_name=input("Enter the First Name: ")
     last_name=input("Enter the Last Name: ")
     email=input("Enter the email: ")       
@@ -19,12 +27,13 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 def first_name_validation(first_name):
-    """Description: 
-        This function validates the first name using regex
-       Parameter:
-        first_name: first name is user-inputted
-       Return:
-        Prints the first name is valid if true else prints not valid"""
+    """
+    Description: This function validates the first name using regex
+    
+    Parameter: first_name: first name is user-inputted
+    
+    Return: Prints the first name is valid if true else prints not valid
+    """
     
     try:
         if not isinstance(first_name, str):
@@ -47,12 +56,13 @@ def first_name_validation(first_name):
         print(f"An unexpected error occurred: {e}")
 
 def last_name_validation(last_name):
-    """Description: 
-        This function validates the last name using regex
-       Parameter:
-        last_name: last name is user-inputted
-       Return:
-        Prints the last name is valid if true else prints not valid"""
+    """
+    Description: This function validates the last name using regex
+       
+    Parameter: last_name: last name is user-inputted
+    
+    Return: Prints the last name is valid if true else prints not valid
+    """
 
     try:
         if not isinstance(last_name, str):
@@ -75,12 +85,13 @@ def last_name_validation(last_name):
         print(f"An unexpected error occurred: {e}")
 
 def email_validation(email):
-    """Description: 
-        This function validates the email using regex
-       Parameter:
-        email: Email is user-inputted
-       Return:
-        Prints the email is valid if true else prints not valid"""
+    """
+    Description: This function validates the email using regex
+       
+    Parameter: email: Email is user-inputted
+       
+    Return: Prints the email is valid if true else prints not valid
+    """
 
     try:
         if not isinstance(email, str):
@@ -103,12 +114,13 @@ def email_validation(email):
         print(f"An unexpected error occurred: {e}")
 
 def mobile_num_validation(mobile_num):
-    """Description: 
-        This function validates the mobile number using regex
-       Parameter:
-        mobile_num: mobile number is user-inputted
-       Return:
-        Prints the mobile number is valid if true else prints not valid"""
+    """
+    Description: This function validates the mobile number using regex
+    
+    Parameter: mobile_num: mobile number is user-inputted
+       
+    Return: Prints the mobile number is valid if true else prints not valid
+    """
 
     try:
         if not isinstance(mobile_num, str):
@@ -131,12 +143,12 @@ def mobile_num_validation(mobile_num):
         print(f"An unexpected error occurred: {e}")
 
 def password_rule(password):
-    """Description: 
-        This function validates the password using regex
-       Parameter:
-        password: password is user-inputted
-       Return:
-        Prints the password is valid if true else prints not valid"""
+    """
+    Description: This function validates the password using regex
+       
+    Parameter: password: password is user-inputted
+       
+    Return: Prints the password is valid if true else prints not valid"""
 
     try:
         if not isinstance(password, str):
